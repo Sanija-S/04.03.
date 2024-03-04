@@ -45,12 +45,16 @@ while True:
         if event=="Input":
             directory=values["Input"]
             image_files=get_image_files(directory)
-            selecte_index=0
-            show_galery(image_files, selecte_index, logs)
-        if event=="Input":
-        if event=="Input":
-
-
+            selected_index=0
+            show_gallery(image_files, selected_index, logs)
+        if event=="Iepriekš":
+            if selected_index>0:
+               selected_index-=1
+               show_gallery(image_files, selected_index, logs)
+        if event=="Atpakaļ":
+            if selected_index<len(image_files)-1:
+               selected_index+=1
+               show_gallery(image_files, selected_index, logs)
 logs.close() 
 
 
