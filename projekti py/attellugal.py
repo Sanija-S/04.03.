@@ -8,4 +8,4 @@ while True:
     event, values= logs.read
     if event==sg.WIN_CLOSED or event== "Iziet":
         break
-logs.close()
+logs.close() 
