@@ -4,6 +4,9 @@ import io # ievada izvada operacijas, lau teksta straumi parverst pec baitu dati
 from PIL import image # moulis kkas apstrada attelus
 # pip install Pillow
 # python.exe -m pip install --upgrade pip
+
+menu_def=[["File",["Close"]], ["HELP",["About"]]] # izvēļņu josla
+
 buttons=[
 
    [sg.T("Izvēlies mapi ar attēliem:"), sg.input(key="Input", inable_events=True), sg.FolderBrowse()],
@@ -17,4 +20,6 @@ while True:
     event, values= logs.read()
     if event in (sg.WIN_CLOSED , "Iziet", "Close"): # more complex solution
         break
+    if event=="About":
+        sg.popup("Darba autore: Sanija Sokirka")
 logs.close() 
