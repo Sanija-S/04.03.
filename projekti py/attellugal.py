@@ -1,5 +1,9 @@
 import PySimpleGUI as sg
 import os 
+import io # ievada izvada operacijas, lau teksta straumi parverst pec baitu datiem- nostreamo
+from PIL import image # mdulis kkas apstrada attelus
+# pip install Pillow
+
 buttons=[
 
 ]
