@@ -5,6 +5,11 @@ from PIL import image # mdulis kkas apstrada attelus
 # pip install Pillow
 
 buttons=[
+    
+   [sg.T("Izvēlies mapi ar attēliem:"), sg.input(key="Input", inable_events=True), sg.FolderBrowse()],
+   [sg.image(key="Image", size=(400,400))],
+   [sg.T("Attēls:"), sg.T("0 / 0", key="Index")],
+   [sg.Button("Iziet"), sg.Button("Iepriekš"), sg.Button("Atpakaļ")]
 
 ]
 logs=sg.Window("Attēlu galerija",buttons, resizable=True)
